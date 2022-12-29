@@ -1,1 +1,181 @@
 
+2022/11/10 06:19:49 [emerg] 7#7: host not found in upstream "mmfsl.findabilityplatform.com" in /etc/nginx/nginx.conf:95
+nginx: [emerg] host not found in upstream "mmfsl.findabilityplatform.com" in /etc/nginx/nginx.conf:95
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+
+
+
+mmfsl-api     | ['Kerb Weight', 'ground_clearance', 'seat_upholstery', 'boot_space', 'Air Conditioner']
+mmfsl-api     | System check identified no issues (0 silenced).
+mmfsl-db      | 2022-11-11T10:27:55.382761Z 2 [Note] Access denied for user 'root'@'192.168.128.3' (using password: YES)
+mmfsl-api     | Exception in thread django-main-thread:
+mmfsl-api     | Traceback (most recent call last):
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+mmfsl-api     |     self.connect()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+mmfsl-api     |     return func(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+mmfsl-api     |     self.connection = self.get_new_connection(conn_params)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+mmfsl-api     |     return func(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 247, in get_new_connection
+mmfsl-api     |     connection = Database.connect(**conn_params)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/MySQLdb/__init__.py", line 130, in Connect
+mmfsl-api     |     return Connection(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/MySQLdb/connections.py", line 185, in __init__
+mmfsl-api     |     super().__init__(*args, **kwargs2)
+mmfsl-api     | MySQLdb._exceptions.OperationalError: (1045, "Access denied for user 'root'@'192.168.128.3' (using password: YES)")
+mmfsl-api     |
+mmfsl-api     | The above exception was the direct cause of the following exception:
+mmfsl-api     |
+mmfsl-api     | Traceback (most recent call last):
+mmfsl-api     |   File "/opt/conda/lib/python3.9/threading.py", line 973, in _bootstrap_inner
+mmfsl-api     |     self.run()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/threading.py", line 910, in run
+mmfsl-api     |     self._target(*self._args, **self._kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/autoreload.py", line 64, in wrapper
+mmfsl-api     |     fn(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/core/management/commands/runserver.py", line 137, in inner_run
+mmfsl-api     |     self.check_migrations()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/core/management/base.py", line 564, in check_migrations
+mmfsl-api     |     executor = MigrationExecutor(connections[DEFAULT_DB_ALIAS])
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/migrations/executor.py", line 18, in __init__
+mmfsl-api     |     self.loader = MigrationLoader(self.connection)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/migrations/loader.py", line 58, in __init__
+mmfsl-api     |     self.build_graph()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/migrations/loader.py", line 235, in build_graph
+mmfsl-api     |     self.applied_migrations = recorder.applied_migrations()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/migrations/recorder.py", line 81, in applied_migrations
+mmfsl-api     |     if self.has_table():
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/migrations/recorder.py", line 57, in has_table
+mmfsl-api     |     with self.connection.cursor() as cursor:
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+mmfsl-api     |     return func(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 323, in cursor
+mmfsl-api     |     return self._cursor()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 299, in _cursor
+mmfsl-api     |     self.ensure_connection()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+mmfsl-api     |     return func(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+mmfsl-api     |     self.connect()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/utils.py", line 91, in __exit__
+mmfsl-api     |     raise dj_exc_value.with_traceback(traceback) from exc_value
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 282, in ensure_connection
+mmfsl-api     |     self.connect()
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+mmfsl-api     |     return func(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/base/base.py", line 263, in connect
+mmfsl-api     |     self.connection = self.get_new_connection(conn_params)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/utils/asyncio.py", line 26, in inner
+mmfsl-api     |     return func(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/django/db/backends/mysql/base.py", line 247, in get_new_connection
+mmfsl-api     |     connection = Database.connect(**conn_params)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/MySQLdb/__init__.py", line 130, in Connect
+mmfsl-api     |     return Connection(*args, **kwargs)
+mmfsl-api     |   File "/opt/conda/lib/python3.9/site-packages/MySQLdb/connections.py", line 185, in __init__
+mmfsl-api     |     super().__init__(*args, **kwargs2)
+mmfsl-api     | django.db.utils.OperationalError: (1045, "Access denied for user 'root'@'192.168.128.3' (using password: YES)")
+
+nohup /usr/lib/jvm/java/bin/java -jar /home/platform/projects/adscience_scheduler/libs/scheduler.jar &
+
+
+
+sudo apt-key adv --keyserver keys.gnupg.net --recv-keys a4a9406876fcbd3c456770c88c718d3b5072e1f5
+
+mysql-apt-config_0.8.24-1_all.deb
+
+
+wget https://dev.mysql.com/get/mysql-apt-config_0.8.24-1_all.deb
+
+sudo dpkg -i mysql-apt-config_0.8.24-1_all.deb
+
+
+apt-get install mysql-client-core-5.7  mysql-client-5.7 mysql-common mysql-server-5.7
+
+
+
+KP]Kwz60#$0)}Du
+
+
+
+cd $SERVICE_HOME/app && sudo -u $RUN_USER $PYTHON $GUNICORN --name $NAME --log-level $LOG_LEVEL --access-logfile $SERVICE_HOME/$ACCESS_LOG_FILE --log-file $SERVICE_HOME/$LOG_FILE --workers=$WORKERS --certfile=$CERTFILE --keyfile=$KEYFILE -b 0.0.0.0:$PORT --timeout $TIMEOUT --capture-output --daemon MMFSL.wsgi:application
+
+
+curl -X POST http://127.0.0.1:7000/api/fsmmfslpricing/ -H "Authorization:Bearer OlTolhLudUoldUnJn4a9K0szXIrNmZ" -H "Content-Type:application/json" -d "{\"pricing_year\": 2025,\"pricing_month\": 1,\"manufact_year\": 2022,\"manufact_month\": 1,\"fuel\": \"Petrol\",\"make_name\":\"MERCEDES BENZ\",\"model_name\":\"E-CLASS(2017-2019)\",\"variant_name\": \"E 200\",\"color\": \"white\",\"reg_location\":\"NEW DELHI\",\"transmission\":\"AUTOMATIC\",\"owners\": 1,\"odo_mtr_rpm\": 1250,\"ex_showroom_price\": 7762733,\"with_model_name\" : \"YES\"}"
+
+
+curl -X POST https://dashboard.findabilityplatform.com:9443/api/fsmmfslpricing_new_ex/ -H "Authorization:Bearer DNN4PEsZVp516iMIG7In0hxdixke2X" -H "Content-Type:application/json" -d "{\"pricing_year\": 2025,\"pricing_month\": 1,\"manufact_year\": 2022,\"manufact_month\": 1,\"fuel\": \"Petrol\",\"make_name\":\"MERCEDES BENZ\",\"model_name\":\"E-CLASS(2017-2019)\",\"variant_name\": \"E 200\",\"color\": \"white\",\"reg_location\":\"NEW DELHI\",\"transmission\":\"AUTOMATIC\",\"owners\": 1,\"odo_mtr_rpm\": 1250,\"ex_showroom_price\": 7762733,\"with_model_name\" : \"YES\"}"
+
+
+
+VERSION_STRING=5:20.10.21~3-0~ubuntu-focal
+sudo apt-get install docker-ce=$VERSION_STRING docker-ce-cli=$VERSION_STRING containerd.io docker-compose-plugin
+
+
+
+
+
+/home/platform/Docker_Projects/MMFSL/mmfsl-api/secret_key/secret_key.txt
+
+/home/platform/Docker_Projects/MMFSL/mmfsl-api/secret_key/secret_key.txt
+
+
+ healthcheck:
+      test: ["CMD-SHELL", "curl --silent --fail localhost:80/health-check || exit 1"]
+      interval: 10s
+      timeout: 10s
+      retries: 3
+	  
+	  
+	  
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = os.environ.get('SECRET_KEY', 'changeme')
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = bool(int(os.environ.get('DEBUG', 0)))
+
+
+
+11Response code:Non HTTP response code: java.net.SocketException
+Response message:Non HTTP response message: Connection reset
+
+
+
+org.apache.http.conn.HttpHostConnectException: Connect to 127.0.0.1:9000 [/127.0.0.1] failed: Connection refused: connect
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:156)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect(HTTPHC4Impl.java:408)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:376)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:393)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:236)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:186)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:110)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest(HTTPHC4Impl.java:939)
+	at org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample(HTTPHC4Impl.java:650)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample(HTTPSamplerProxy.java:66)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1301)
+	at org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample(HTTPSamplerBase.java:1290)
+	at org.apache.jmeter.threads.JMeterThread.doSampling(JMeterThread.java:651)
+	at org.apache.jmeter.threads.JMeterThread.executeSamplePackage(JMeterThread.java:570)
+	at org.apache.jmeter.threads.JMeterThread.processSampler(JMeterThread.java:501)
+	at org.apache.jmeter.threads.JMeterThread.run(JMeterThread.java:268)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.connect0(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket(PlainConnectionSocketFactory.java:75)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
+	... 19 more
+
+get_all_creative_images_v1
+set_failed_image_popup_status
